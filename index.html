@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gerador de Senhas Avançado</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="icon" href="logo.png" type="image/x-icon">
+
+</head>
+<body>
+  <div class="container">
+    <h1>Gerador de Senhas Avançado</h1>
+    <h2 type="text" id="generatedPassword" readonly onclick="copyPassword()">Senha</h2>
+    <span id="lengthValue">12</span>
+    <br>
+    <span id="passwordStrength">Força da senha</span>
+
+    <br>
+    <input class="slider" type="range" id="passwordLength" min="4" max="20" value="12" oninput="updateLengthValue(this.value)">
+    <div class="checkboxes">
+      <input type="checkbox" id="checkbox1" name="checkbox1" value="checkbox1">
+      <label for="checkbox1">Incluir maiúsculas</label><br>
+  
+      <input type="checkbox" id="checkbox2" name="checkbox2" value="checkbox2">
+      <label for="checkbox2">Incluir minúsculas</label><br>
+  
+      <input type="checkbox" id="checkbox3" name="checkbox3" value="checkbox3">
+      <label for="checkbox3">Incluir números</label><br>
+  
+      <input type="checkbox" id="checkbox4" name="checkbox4" value="checkbox4">
+      <label for="checkbox4">Incluir símbolos</label><br>
+      </div>
+      <div id="passwordHistoryContainer"></div>
+
+    <button onclick="generatePassword()">Gerar Senha</button>
+    <button onclick="copyPassword()">Copiar Senha</button>
+
+
+    
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
